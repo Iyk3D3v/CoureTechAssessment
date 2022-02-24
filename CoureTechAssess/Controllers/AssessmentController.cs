@@ -52,21 +52,7 @@ namespace CoureTechAssess.Controllers
             }
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Check()
-        {
-            try
-            {
-                var res = await _service.GetAll();
-
-                return Ok(res);
-
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.InnerException.Message ?? ex.Message);
-            }
-        }
+     
 
         //for question two
         [HttpGet]
